@@ -1,0 +1,173 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/activity_side_margin"
+    android:layout_marginRight="@dimen/activity_side_margin"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/vTopMargin"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="@dimen/tvWidth"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:text="@string/tvListPrice"
+            android:textSize="@dimen/textSize" />
+
+        <EditText
+            android:id="@+id/etOriginalPrice"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/etListPriceHint"
+            android:inputType="numberDecimal" >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/vTopMargin"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="@dimen/tvWidth"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:text="@string/tvDiscount"
+            android:textSize="@dimen/textSize" />
+
+        <RadioGroup
+            android:id="@+id/rgDiscountSelector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/radioButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/radio1"
+                android:textSize="@dimen/textSize" 
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/radio2"
+                android:textSize="@dimen/textSize" />
+
+            <RadioButton
+                android:id="@+id/radioButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/radio3"
+                android:textSize="@dimen/textSize" />
+
+            <RadioButton
+                android:id="@+id/radioButton4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/radio4"
+                android:textSize="@dimen/textSize" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/vTopMargin"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="@dimen/tvWidth"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:text="@string/tvCustom"
+            android:textSize="@dimen/textSize" />
+
+        <SeekBar
+            android:id="@+id/sbCustomAmount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.80" />
+
+        <TextView
+            android:id="@+id/tvCustomPercentageDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:text="@string/initCustomPercentage"
+            android:textSize="@dimen/textSize" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/vTopMargin"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="@dimen/tvWidth"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:text="@string/tvSaving"
+            android:textSize="@dimen/textSize" />
+
+        <TextView
+            android:id="@+id/tvSavedAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:text="@string/tvInitZeroDollar"
+            android:textSize="@dimen/textSize" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/vTopMargin"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="@dimen/tvWidth"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:text="@string/tvPaid"
+            android:textSize="@dimen/textSize" />
+
+        <TextView
+            android:id="@+id/tvPayAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:text="@string/tvInitZeroDollar"
+            android:textSize="@dimen/textSize" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="@dimen/vTopMargin"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/btnExit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btnExit" />
+    </LinearLayout>
+
+</LinearLayout>
